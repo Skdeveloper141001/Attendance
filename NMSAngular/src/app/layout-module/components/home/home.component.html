@@ -1,0 +1,242 @@
+<!-- <div class="wrapper sticky">
+  <nav class="navbar-fixed-top">
+    <a href="#" class="logo">
+      <mat-icon>lan</mat-icon>  Network Management System
+    </a>
+    <ul class="nav-links">
+      <li><a (click)="openLogin()">Login</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="homepage-container">
+  <div class="hero-section">
+    <div class="hero-text">
+      <h1>Network Management System</h1>
+      <p>
+        Efficiently monitor, configure, and manage your entire network infrastructure from a centralized dashboard.
+        Stay informed with real-time data, device health, and performance metrics.
+      </p>
+      <button mat-raised-button color="primary">Get Started</button>
+    </div>
+    <div class="hero-image">
+      <img src="assets/network.gif" alt="Network Illustration" />
+    </div>
+  </div>
+
+  <div class="features-section">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <mat-card class="feature-card">
+        <mat-icon>router</mat-icon>
+        <h3>Device Monitoring</h3>
+        <p>Track the health and status of routers, switches, servers, and more.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <mat-icon>network_check</mat-icon>
+        <h3>SNMP Integration</h3>
+        <p>Seamlessly gather network data using SNMP v1/v2c/v3 protocols.</p>
+      </mat-card>
+      <mat-card class="feature-card">
+        <mat-icon>security</mat-icon>
+        <h3>Alerts & Notifications</h3>
+        <p>Instant alerts on anomalies and thresholds for proactive responses.</p>
+      </mat-card>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="header-bar">
+  <mat-toolbar color="primary" class="top-nav">
+    <div class="logo-container">
+      <mat-icon>apartment</mat-icon>
+      <span class="brand-title"> Network Management System</span>
+    </div>
+    <span class="spacer"></span>
+    <button mat-button (click)="openLogin()">Login</button>
+  </mat-toolbar>
+</div>
+
+<div class="homepage-wrapper">
+  <section class="hero-banner mat-elevation-z2">
+    <div class="text-content">
+      <h1>Centralized Network Management</h1>
+      <p>
+        Securely monitor and manage national infrastructure with real-time insights,
+        performance analytics, and automated SNMP alerts.
+      </p>
+      <button mat-raised-button color="accent">Explore System</button>
+    </div>
+    <div class="banner-image">
+      <img src="network.gif" alt="Network Map" />
+    </div>
+  </section>
+
+  <section class="features-area">
+    <h2>Key Functionalities</h2>
+    <div class="features-cards">
+      <mat-card class="feature-tile mat-elevation-z3">
+        <mat-icon>dns</mat-icon>
+        <h3>Infrastructure Overview</h3>
+        <p>Monitor all connected devices across ministries, departments & regions.</p>
+      </mat-card>
+
+      <mat-card class="feature-tile mat-elevation-z3">
+        <mat-icon>lan</mat-icon>
+        <h3>SNMP Data Fetch</h3>
+        <p>Get live data using SNMP v1/v2c/v3 protocols with authentication.</p>
+      </mat-card>
+
+      <mat-card class="feature-tile mat-elevation-z3">
+        <mat-icon>notifications_active</mat-icon>
+        <h3>Alert Mechanism</h3>
+        <p>Receive alerts for downtimes, anomalies, or breach thresholds.</p>
+      </mat-card>
+    </div>
+  </section>
+</div> -->
+
+
+
+
+
+<mat-toolbar color="primary" class="navbar">
+  <div class="d-flex align-items-center">
+    <mat-icon class="me-2 mat-icon">apartment</mat-icon>
+    <span class="navbar-title">Network Management System</span>
+  </div>
+  <span class="flex-spacer"></span>
+  <div>
+    <button class="button" color="accent" (click)="openLogin()">Login</button>
+  </div>
+</mat-toolbar>
+
+
+<section>
+<div class="home-section d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-light text-start content-section">
+        <h1 class="fw-bold display-5">Network Management System – NMS</h1>
+        <p class="lead mt-3">
+          The JPL NMS provides a foundation to implement Operations Support Systems (OSS) architectures.
+          It enables service providers to rapidly deploy new services and meet stringent QoS requirements.
+        </p>
+        <button mat-raised-button color="accent" class="get-in-touch-btn">Get in touch</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+<section class="container1">
+  <div class="container py-5">
+    <div class="row gy-4 justify-content-center flex">
+      <div
+        class="col-12 col-sm-6 col-lg-3 mb-4"
+        *ngFor="let stat of stats">
+        <div class="stat-card position-relative">
+          <div class="icon-circle">
+            <mat-icon>{{ stat.icon }}</mat-icon>
+          </div>
+          <h2>{{ stat.count }}</h2>
+          <p>{{ stat.label }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="features-section py-5">
+  <div class="container text-center mb-5">
+    <h2 class="section-title">
+      <span class="line"></span> Features <span class="line"></span>
+    </h2>
+  
+  </div>
+
+  <div class="container-feature">
+    <div class="  row align-items-center">
+   
+      <div class="col-lg-6 mb-4 mb-lg-0 feature-box">
+        <h3 class="fw-bold mb-3">Network Management System <br>Key Features</h3>
+      
+        <ul class="feature-list">
+          <li>Real-Time Network Monitoring</li>
+          <li>Performance Analytics & Reporting</li>
+          <li>Device Discovery & Topology Mapping</li>
+          <li>Alerts & Notification System</li>
+          <li>Security & Access Control</li>
+          <li>Configuration Management</li>
+          <li>Fault Management</li>
+        </ul>
+        <button class="btn btn-danger mt-4">Get Started</button>
+      </div>
+    </div>
+    
+   
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="img-stack">
+          <img src="feature-card.jpg" alt="Background" class="img-bg">
+          <img src="feature-card1.png" alt="Foreground" class="img-fg mat-elevation-z4">
+        </div>
+      </div>
+
+  </div>
+ 
+</section>
+
+
+<footer class="gov-footer mat-typography" id="footer">
+  <div class="footer-container container py-4">
+    <div class="row">
+      <!-- Contact Section -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mat-h6 text-uppercase">Contact Us</h5>
+        <p class="mb-1">Indira Gandhi Krishi Vishwavidyalaya (IGKV)</p>
+        <p>Krishak Nagar, Raipur, Chhattisgarh, India - 492012</p>
+        <p>Email: info&#64;igkv.ac.in<br>Phone: +91-771-2442302</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mat-h6 text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About IGKV</a></li>
+          <li><a href="#">Departments</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Developed By -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mat-h6 text-uppercase">Developed By</h5>
+        <p>Network Management Team</p>
+        <p>© {{ currentYear }} IGKV Raipur</p>
+      </div>
+
+      <!-- Social & Newsletter (Optional Section) -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mat-h6 text-uppercase">Follow Us</h5>
+        <div class="footer-social d-flex gap-3">
+          <a href="https://x.com/home?lang=en" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="text-center py-3 border-top">
+      <small class="text-center">
+        Designed and Maintained by IGKV IT Cell | Best viewed on modern browsers
+      </small>
+    </div>
+  </div>
+</footer>

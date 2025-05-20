@@ -1,0 +1,115 @@
+
+<form class="device-form" [formGroup]="deviceform">
+  <!-- <h2 class="form-title">Device Information</h2> -->
+  <div class="form-header">
+    <h2 class="form-title">Device Information</h2>
+    <button mat-icon-button class="close-button" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div class="form-row">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Device Name</mat-label>
+      <input matInput formControlName="devicename" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>MAC Address</mat-label>
+      <input matInput formControlName="mac_address" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Device Type</mat-label>
+      <mat-select formControlName="device_type" required>
+        <!-- <mat-option *ngFor="let type of deviceTypes" [value]="type">{{ type }}</mat-option> -->
+        <mat-option *ngFor="let devicetype of deviceTypes" [value]="devicetype.name">
+          {{ devicetype.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Make</mat-label>
+      <mat-select formControlName="make">
+        <mat-option *ngFor="let make of makes" [value]="make">{{ make }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="form-row">
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Model</mat-label>
+      <input matInput formControlName="model" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Serial Number</mat-label>
+      <input matInput formControlName="serial_number" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option *ngFor="let status of statusOptions" [value]="status">{{ status }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>SNMP Version</mat-label>
+      <mat-select formControlName="snmp_version">
+        <mat-option *ngFor="let version of snmpVersions" [value]="version">{{ version }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div class="form-row">
+    
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>SNMP Community</mat-label>
+      <mat-select formControlName="snmp_community">
+        <mat-option *ngFor="let community of snmpCommunities" [value]="community">{{ community }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>System Name</mat-label>
+      <input matInput formControlName="sys_name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Purchase Date</mat-label>
+      <input matInput [matDatepicker]="picker1" formControlName="purchase_date" />
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>First Installation Date</mat-label>
+      <input matInput [matDatepicker]="picker2" formControlName="first_installation_date" />
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+
+  <div class="form-row">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>System Description</mat-label>
+      <textarea matInput formControlName="sys_descr" rows="4"></textarea>
+    </mat-form-field>
+
+    <div class="checkboxes">
+      <mat-checkbox formControlName="snmp_enabled">SNMP Enabled</mat-checkbox>
+      <mat-checkbox formControlName="is_monitored">Is Monitored</mat-checkbox>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    
+      <button type="submit" (click)="onSubmit()" mat-raised-button>Submit</button>
+      <button type="submit" (click)="onUpdate(this.data.device.id)" mat-raised-button>Update</button>
+  
+    </div>
+</form>

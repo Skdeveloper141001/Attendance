@@ -1,0 +1,64 @@
+<form class="device-form" [formGroup]="ipsubnetform">
+    <div class="form-header">
+      <h2 class="form-title">Add IP Subnet</h2>
+      <button mat-icon-button class="close-button" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  
+    <div class="form-row">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>IP Subnet Name</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+     
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Loaction Name</mat-label>
+        <mat-select formControlName="location_id" required>
+          <!-- <mat-option *ngFor="let type of deviceTypes" [value]="type">{{ type }}</mat-option> -->
+          <mat-option *ngFor="let devicetype of floorList" [value]="devicetype.id">
+            {{ devicetype.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>CIDR Block</mat-label>
+        <input matInput formControlName="cidr_block" />
+      </mat-form-field>
+
+    </div>
+  
+    <div class="form-row">
+
+
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>VLAN Id</mat-label>
+            <input matInput formControlName="vlan_id" />
+          </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Gateway</mat-label>
+        <input matInput formControlName="gateway" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" />
+      </mat-form-field>
+      
+    </div>
+  
+    <!-- <div class="form-row">
+      <label>Icon</label>
+      <input type="file"  accept="image/*" />
+    </div> -->
+
+  
+    <div class="form-actions">
+      <button type="submit" (click)="onSubmit()"  mat-raised-button color="primary">Submit</button>
+      <button type="button" (click)="onUpdate(data.device?.id)" mat-raised-button color="accent">Update</button>
+    </div>
+  </form>

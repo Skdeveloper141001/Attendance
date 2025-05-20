@@ -1,0 +1,210 @@
+@use '@angular/material' as mat;
+
+$primary-color: #003366;
+$border-color: #cccccc;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+.device-form {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: 'Roboto', sans-serif;
+
+  .form-title {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid $primary-color;
+  }
+
+  .form-field {
+    flex: 1 1 250px;
+    min-width: 180px;
+
+    mat-form-field {
+      width: 100%;
+      font-size: 13px;
+
+      .mat-form-field-wrapper {
+        padding-bottom: 0.5rem;
+      }
+
+      .mat-form-field-infix {
+        padding: 0.3rem 0.5rem;
+      }
+
+      .mat-input-element,
+      .mat-select-value-text {
+        font-size: 13px;
+        line-height: 1.2;
+      }
+    }
+
+    mat-label {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+
+  .form-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 1rem;
+
+    button {
+      padding: 4px 12px;
+      font-size: 13px;
+    }
+  }
+
+  mat-checkbox {
+    font-size: 13px;
+    margin-right: 1rem;
+  }
+}
+
+// Table styles remain the same unless compactness is needed there too
+
+@media screen and (max-width: 768px) {
+  .device-form {
+    padding: 0.8rem;
+
+    .form-field {
+      flex: 1 1 100%;
+      min-width: 100%;
+    }
+
+    .form-title {
+      font-size: 1.4rem;
+    }
+
+    mat-form-field {
+      font-size: 12px;
+
+      .mat-form-field-infix {
+        padding: 0.25rem 0.5rem;
+      }
+
+      .mat-input-element,
+      .mat-select-value-text {
+        font-size: 12px;
+      }
+    }
+
+    mat-label {
+      font-size: 12px;
+    }
+
+    .form-actions {
+      flex-direction: column;
+      align-items: flex-start;
+
+      button {
+        width: 100%;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.device-table-container {
+    padding: 1rem;
+  
+    .header-card,
+    .filter-card
+    {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+    .table-card {
+      // background-color: #fff;
+      // border-radius: 8px;
+      // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-top: 50px;
+      // padding: 1rem;
+    }
+  
+    .header-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      h3 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+  
+      .add-button {
+        background-color: #9c27b0;
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  
+    .filter-card {
+      .filter-input {
+        width: 100%;
+  
+        ::ng-deep .mat-form-field-appearance-standard .mat-form-field-wrapper {
+          padding-bottom: 0.5em;
+        }
+      }
+    }
+  
+    .table-card {
+      overflow-x: auto;
+  
+      table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        th, td {
+          padding: 0.75rem;
+          text-align: left;
+          font-size: 0.95rem;
+        }
+  
+        th {
+          background-color: #808de2;
+          font-weight: 600;
+        }
+  
+        tr:nth-child(even) {
+          background-color: #fafafa;
+        }
+  
+        mat-icon {
+          font-size: 18px;
+          color: #9c27b0;
+          cursor: pointer;
+          margin: 0 0.25rem;
+        }
+      }
+    }
+  }

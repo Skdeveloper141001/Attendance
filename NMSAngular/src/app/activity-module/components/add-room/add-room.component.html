@@ -1,0 +1,58 @@
+<form class="device-form" [formGroup]="roomform">
+    <div class="form-header">
+      <h2 class="form-title">Add Room</h2>
+      <button mat-icon-button class="close-button" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  
+    <div class="form-row">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Room Name</mat-label>
+            <input matInput formControlName="name" />
+          </mat-form-field>
+     
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Floor Name</mat-label>
+        <mat-select formControlName="floor_id" required>
+          <!-- <mat-option *ngFor="let type of deviceTypes" [value]="type">{{ type }}</mat-option> -->
+          <mat-option *ngFor="let devicetype of floorList" [value]="devicetype.id">
+            {{ devicetype.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+
+    </div>
+  
+    <div class="form-row">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description" />
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Latitude</mat-label>
+            <input matInput formControlName="latitude" />
+          </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Longitude</mat-label>
+        <input matInput formControlName="longitude" />
+      </mat-form-field>
+    </div>
+  
+    <!-- <div class="form-row">
+      <label>Icon</label>
+      <input type="file"  accept="image/*" />
+    </div> -->
+
+  
+    <div class="form-actions">
+      <button type="submit" (click)="onSubmit()"  mat-raised-button color="primary">Submit</button>
+      <button type="button" (click)="onUpdate(data.device?.id)" mat-raised-button color="accent">Update</button>
+    </div>
+  </form>

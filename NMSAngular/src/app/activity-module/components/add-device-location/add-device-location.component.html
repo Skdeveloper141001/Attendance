@@ -1,0 +1,54 @@
+<form class="device-form" [formGroup]="deviceLocationform">
+    <div class="form-header">
+      <h2 class="form-title">Device Location Map</h2>
+      <button mat-icon-button class="close-button" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  
+    <div class="form-row">
+     
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Device Name</mat-label>
+        <mat-select formControlName="device_id" required>
+          <!-- <mat-option *ngFor="let type of deviceTypes" [value]="type">{{ type }}</mat-option> -->
+          <mat-option *ngFor="let devicetype of devicesList" [value]="devicetype.id">
+            {{ devicetype.devicename }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Room Name</mat-label>
+        <mat-select formControlName="room_id" required>
+          <!-- <mat-option *ngFor="let type of deviceTypes" [value]="type">{{ type }}</mat-option> -->
+          <mat-option *ngFor="let item of rooms" [value]="item.id">
+            {{ item.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+  
+    <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Latitude</mat-label>
+            <input matInput formControlName="latitude" />
+          </mat-form-field>
+
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Longitude</mat-label>
+        <input matInput formControlName="longitude" />
+      </mat-form-field>
+    </div>
+  
+    <!-- <div class="form-row">
+      <label>Icon</label>
+      <input type="file"  accept="image/*" />
+    </div> -->
+
+  
+    <div class="form-actions">
+      <button type="submit" (click)="onSubmit()"  mat-raised-button color="primary">Submit</button>
+      <button type="button" (click)="onUpdate(data.device?.id)" mat-raised-button color="accent">Update</button>
+    </div>
+  </form>

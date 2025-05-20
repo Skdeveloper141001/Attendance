@@ -1,0 +1,67 @@
+
+<!-- <a routerLink="/activity/deviceinfo" >deviceinfo</a> -->
+ 
+<mat-toolbar color="primary" class="top-toolbar">
+    <button mat-icon-button (click)="drawer.toggle()" class="menu-button" aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-icon style="margin-left:40px">lan</mat-icon>
+    <span class="app-title" style="margin-left:10px">Network Management System</span>
+    <span class="spacer"></span>
+    <button mat-icon-button aria-label="User menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer [mode]="isHandset ? 'over' : 'side'" [opened]="!isHandset" class="sidenav" fixedInViewport>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/activity/sidebar/dashboard" routerLinkActive="active">
+          <mat-icon>dashboard</mat-icon>
+          <span class="nav-label">Dashboard</span>
+        </a>
+        <a mat-list-item routerLink="/activity/sidebar/deviceinfo" routerLinkActive="active">
+          <mat-icon>memory</mat-icon>
+          <span class="nav-label">Device Info</span>
+        </a>
+        <!-- <a mat-list-item routerLink="/activity/sidebar/devicegroup" routerLinkActive="active">
+          <mat-icon>devices_other</mat-icon>
+          <span class="nav-label">Device Group</span>
+        </a>
+        <a mat-list-item routerLink="/activity/sidebar/locations" routerLinkActive="active">
+          <mat-icon>location_on</mat-icon>
+          <span class="nav-label">Location</span>
+        </a> -->
+        <a mat-list-item routerLink="/activity/sidebar/groupmap" routerLinkActive="active">
+          <!-- <mat-icon>Group Map</mat-icon> -->
+          <span class="nav-label">Group Mapping</span>
+        </a>
+        <a mat-list-item routerLink="/activity/sidebar/networkinterface" routerLinkActive="active">
+          <!-- <mat-icon>Device Network Interface</mat-icon> -->
+          <span class="nav-label">Device Network Interface</span>
+        </a>
+        <a mat-list-item routerLink="/activity/sidebar/devicelocation" routerLinkActive="active">
+          <!-- <mat-icon>Device_Location</mat-icon> -->
+          <span class="nav-label">Device Location</span>
+        </a>
+        <a mat-list-item routerLink="/activity/sidebar/rooms" routerLinkActive="active">
+          <!-- <mat-icon>rooms</mat-icon> -->
+          <span class="nav-label">Room</span>
+        </a>
+        <a mat-list-item routerLink="/activity/sidebar/ipsubnet" routerLinkActive="active">
+          <!-- <mat-icon>IPSubnet</mat-icon> -->
+          <span class="nav-label">IPSubnet</span>
+        </a>
+        <a mat-list-item routerLink="/activity/sidebar/ipaddress" routerLinkActive="active">
+          <!-- <mat-icon>IPAdress </mat-icon> -->
+          <span class="nav-label">IP Address</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

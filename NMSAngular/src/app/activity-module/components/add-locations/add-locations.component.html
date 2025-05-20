@@ -1,0 +1,76 @@
+
+<form class="device-form" [formGroup]="locationform">
+    <!-- <h2 class="form-title">Device Information</h2> -->
+    <div class="form-header">
+      <h2 class="form-title">Location Information</h2>
+      <button mat-icon-button class="close-button" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>City</mat-label>
+        <mat-select formControlName="city" required>
+          <!-- <mat-option *ngFor="let type of deviceTypes" [value]="type">{{ type }}</mat-option> -->
+          <mat-option *ngFor="let city of City" [value]="city.name">
+            {{ city.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+  
+      
+    </div>
+  
+    <div class="form-row">
+  
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>State</mat-label>
+            <mat-select formControlName="state" required>
+               <mat-option *ngFor="let state of State" [value]="state.name">
+                {{ state.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="country" required>
+              <!-- <mat-option *ngFor="let type of deviceTypes" [value]="type">{{ type }}</mat-option> -->
+              <mat-option *ngFor="let country of Country" [value]="country.name">
+                {{ country.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+      
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Latitude</mat-label>
+            <input matInput formControlName="latitude" />
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Longitude</mat-label>
+            <input matInput formControlName="longitude" />
+          </mat-form-field>
+  
+    </div>
+  
+    
+  
+    <div class="form-actions">
+      
+        <button type="submit" (click)="onSubmit()" mat-raised-button>Submit</button>
+        <button type="submit" (click)="onUpdate()" mat-raised-button>Update</button>
+    
+      </div>
+  </form>
+  

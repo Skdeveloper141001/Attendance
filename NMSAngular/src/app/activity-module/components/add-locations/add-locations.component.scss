@@ -1,0 +1,148 @@
+
+$primary-color: #003366;
+$border-color: #ccc;
+$box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+.device-form {
+  margin: 0 auto;
+  // padding: 20px;
+  // box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  // margin-top: 100px;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: auto;
+  // background-color: aquamarine;
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 0.75rem 1rem;
+  // border-radius: 6px 6px 0 0;
+
+  .form-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+  }
+
+  .close-button {
+    color: #fff;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+  .form-row {
+    display: flex;
+    // gap: 0.75rem;
+    flex-wrap: wrap;
+
+    .form-field {
+      flex: 1 1 22%;
+      min-width: 140px;
+      padding: 10px;
+      mat-form-field {
+        width: 100%;
+        font-size: 11px;
+
+        .mat-form-field-wrapper {
+          padding-bottom: 0.35rem;
+        }
+
+        .mat-form-field-infix {
+          padding: 0.2rem 0.4rem;
+        }
+
+        .mat-input-element,
+        .mat-select-value-text {
+          font-size: 11px;
+        }
+      }
+
+      mat-label {
+        font-size: 11px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+   padding: 20px;
+    mat-checkbox {
+      font-size: 11px;
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    // margin-top: 1rem;
+   padding: 20px;
+    button {
+      font-size: 11px;
+      padding: 6px 12px;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 8%);
+      }
+
+      &:disabled {
+        background-color: lighten($primary-color, 20%);
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+// Media query for 800px x 800px
+@media screen and (max-width: 800px) and (max-height: 800px) {
+  .device-form {
+    padding: 0.75rem;
+    max-width: 440px;
+
+    .form-title {
+      font-size: 1.3rem;
+    }
+
+    .form-row {
+      .form-field {
+        flex: 1 1 48%;
+      }
+    }
+
+    .checkboxes {
+      gap: 0.75rem;
+
+      mat-checkbox {
+        font-size: 11px;
+      }
+    }
+
+    .form-actions {
+      justify-content: center;
+
+      button {
+        font-size: 11px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+

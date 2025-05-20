@@ -1,0 +1,80 @@
+<!-- 
+
+
+<form class="device-form" [formGroup]="deviceform">
+   
+    <div class="form-header">
+      <h2 class="form-title">Device Group</h2>
+      <button mat-icon-button class="close-button" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Device Group Name</mat-label>
+        <input matInput formControlName="devicename" required />
+      </mat-form-field>
+  
+     </div>
+    
+  
+     <div class="row">
+      <div class="form-container ">
+        <div class="form-item">
+          <label>icon</label>
+          
+          <input type="file" (change)="onFileSelected($event, 'Profile_pic')" accept="image/*">
+             </div>
+    
+  
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>System Description</mat-label>
+        <textarea matInput formControlName="sys_descr" rows="4"></textarea>
+      </mat-form-field>
+</div>
+    
+  
+    <div class="form-actions">
+      
+        <button type="submit" (click)="onSubmit()" mat-raised-button>Submit</button>
+        <button type="submit" (click)="onUpdate(this.data.device.id)" mat-raised-button>Update</button>
+    
+      </div>
+  </form>
+   -->
+
+   <form class="device-form" [formGroup]="deviceform">
+    <div class="form-header">
+      <h2 class="form-title">Device Group</h2>
+      <button mat-icon-button class="close-button" (click)="onClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Device Group Name</mat-label>
+        <input matInput formControlName="devicename" required />
+      </mat-form-field>
+    </div>
+  
+    <div class="form-row">
+      <label>Icon</label>
+      <input type="file"  accept="image/*" />
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>System Description</mat-label>
+        <textarea matInput formControlName="sys_descr" rows="4"></textarea>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-actions">
+      <button type="submit" (click)="onSubmit()" mat-raised-button color="primary">Submit</button>
+      <button type="button" (click)="onUpdate(data.device?.id)" mat-raised-button color="accent">Update</button>
+    </div>
+  </form>
+  
