@@ -1,0 +1,13 @@
+----------Abstract------------NMS--------
+
+Sure! Here's an extended version of the abstract, containing more than 100 words:
+
+---
+
+**Abstract**
+
+As universities increasingly depend on digital infrastructure to support academic, administrative, and research activities, the need for an efficient and secure network management system has become critical. This project introduces a comprehensive University Network Management System (UNMS) designed to oversee and manage the entire campus network infrastructure. The system provides centralized control over network resources, facilitates real-time monitoring of data traffic, and ensures secure access through user authentication and role-based permissions. Key features include bandwidth allocation, device and user tracking, automated alert systems for anomalies, and log management for audit purposes. By integrating these functionalities into a unified interface, the UNMS simplifies the tasks of network administrators while enhancing system reliability and scalability. It also supports future expansion, allowing seamless integration of new technologies and devices as the university’s digital needs grow. The system ultimately aims to optimize performance, minimize downtime, and provide a secure, scalable, and user-friendly solution for modern university network environments.
+
+---
+
+

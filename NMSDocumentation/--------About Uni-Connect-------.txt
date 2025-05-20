@@ -1,0 +1,5 @@
+--------About Uni-Connect-------
+
+Uni-Connect is an advanced University Network Management System designed to streamline and secure the digital infrastructure of educational institutions. It serves as a centralized platform for managing all aspects of campus network operations, including user access control, bandwidth monitoring, device management, and network security. Tailored specifically for university environments, Uni-Connect supports real-time data traffic analysis, automated alerts, and detailed logging to ensure consistent network performance and quick issue resolution.
+
+The system is built with scalability and ease of use in mind, allowing IT administrators to adapt to growing demands and evolving technologies. Whether managing hundreds or thousands of connected devices, Uni-Connect provides the tools needed to maintain a reliable, efficient, and secure digital ecosystem that supports both academic and administrative functions
